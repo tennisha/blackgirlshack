@@ -1,4 +1,5 @@
 ASPX reverse Shell (Insomnia)
 https://jiveturkey.rocks/tactics/2021/09/21/asp-reverse-shell.html
 
-
+SMB
+nmap -Pn -p 445 --script smb-vuln-* 10.10.10.10
