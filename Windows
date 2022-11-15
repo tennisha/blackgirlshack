@@ -4,5 +4,15 @@ https://jiveturkey.rocks/tactics/2021/09/21/asp-reverse-shell.html
 SMB
 nmap -Pn -p 445 --script smb-vuln-* 10.10.10.10
 
+smbmap -H 10.10.10.10
+smb client -N -L //10.10.10.10
+nmap --script smb-os-discovery.nse -p445 <target>
+nmap --script smb-enum-shares.nse -p445 <target>
+nmap –script smb-enum-users.nse -p445
+nmap --script smb-enum-domains.nse,smb-enum-groups.nse,smb-enum-processes.nse,smb-enum-services.nse,smb-enum-sessions.nse,smb-enum-shares.nse,smb-enum-users.nse -p445
+nmap --script smb-vuln* -Pn -oN legacy 10.10.10.10
+sudo nmap --script smb-vuln* -p 445 -Pn -oN legacy 10.10.10.4
+
+
 Windows-exploit-suggester.py
 https://github.com/AonCyberLabs/Windows-Exploit-Suggester
