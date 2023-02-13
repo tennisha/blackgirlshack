@@ -1,6 +1,8 @@
 ASPX reverse Shell (Insomnia)
 https://jiveturkey.rocks/tactics/2021/09/21/asp-reverse-shell.html
 
+windows-exploit-suggester.py
+
 SMB
 nmap -Pn -p 445 --script smb-vuln-* 10.10.10.10
 add to the hosts file 10.10.11.152 timelapse.htb dc01.timelapse.htb
