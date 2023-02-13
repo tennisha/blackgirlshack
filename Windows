@@ -2,6 +2,7 @@ ASPX reverse Shell (Insomnia)
 https://jiveturkey.rocks/tactics/2021/09/21/asp-reverse-shell.html
 
 windows-exploit-suggester.py
+book.hacktricks.xyz
 
 SMB
 nmap -Pn -p 445 --script smb-vuln-* 10.10.10.10
