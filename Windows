@@ -15,6 +15,9 @@ sudo nmap --script smb-vuln* -p 445 -Pn -oN legacy 10.10.10.4
 
 Payloads all the things
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md4
+Zip files
+$ fcrackzip -D -u winrm_backup.zip -p /usr/share/wordlists/rockyou.txt
+
 
 System enum
 https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html
