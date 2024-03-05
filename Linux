@@ -1,6 +1,11 @@
  
 Introduction
 
+
+cron Timer - systemctl list-timers
+pspy - monitor linux processor (download 64 bit version)
+if cron job is running as root then add one liner bash reverse shell to the process and that wil get root.
+
 Stored Passwords
 cat ~/.bash_history | grep -i passw
 
